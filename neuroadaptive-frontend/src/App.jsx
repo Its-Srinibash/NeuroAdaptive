@@ -248,17 +248,17 @@ function App() {
     );
   }
 
-  // if (showReadingSimplifier) {
-  //   return (
-  //     <>
-  //       <ReadingSimplifier
-  //         onBack={handleBackFromReading}
-  //         preferences={preferences}
-  //       />
-  //       {/* <CalmCompanion /> */}
-  //     </>
-  //   );
-  // }
+  if (showReadingSimplifier) {
+    return (
+      <>
+        <ReadingSimplifier
+          onBack={handleBackFromReading}
+          preferences={preferences}
+        />
+        <CalmCompanion />
+      </>
+    );
+  }
 
   // Meeting Summary View
   if (showMeetingSummary) {
@@ -268,7 +268,7 @@ function App() {
           onBack={handleBackFromMeeting}
           preferences={preferences}
         />
-        {/* <CalmCompanion /> */}
+        <CalmCompanion />
       </>
     );
   }
@@ -283,7 +283,7 @@ function App() {
           onClose={handleBackFromRecap}
           onReset={resetApp}
         />
-        {/* <CalmCompanion /> */}
+        <CalmCompanion />
         {/* <SettingsPanel /> */}
       </>
     );
@@ -304,7 +304,7 @@ function App() {
           onExit={handleExitFocus}
           preferences={preferences}
         />
-        {/* <CalmCompanion /> */}
+        <CalmCompanion />
         {/* <SettingsPanel /> */}
       </>
     );
@@ -681,7 +681,7 @@ function App() {
         <ReadingSimplifier onClose={() => setShowReadingSimplifier(false)} />
       )} */}
 
-      {/* <CalmCompanion /> */}
+      <CalmCompanion />
 
       {focusMode && (
         <FocusMode 

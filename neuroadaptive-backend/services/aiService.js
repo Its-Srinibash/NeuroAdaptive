@@ -308,22 +308,39 @@ export async function generateCalmingResponse(message, type = 'calming') {
   console.log('📩 Calm Companion request received:', { message, type });
   
   try {
-    const prompt = `You are a gentle, empathetic AI companion. Respond to the user's message with warmth and understanding. 
+    const prompt = `You are a specialized AI Calm Companion designed for neuroadaptive wellness support. You help users with stress, anxiety, focus challenges, emotional regulation, and mental wellness needs.
 
-User says: "${message}"
+CONTEXT: This is part of a neuroadaptive accessibility platform helping users with ADHD, anxiety, autism, dyslexia, and cognitive differences.
 
-Provide a caring, personalized response (2-3 sentences). Be supportive and acknowledge their specific situation.
+USER MESSAGE: "${message}"
+
+RESPONSE GUIDELINES:
+- Be warm, empathetic, and non-judgmental
+- Acknowledge their specific situation and feelings
+- Provide practical, actionable wellness strategies when appropriate
+- Use calming, simple language (accessibility-friendly)
+- Offer specific techniques for common challenges:
+  * Anxiety: breathing exercises, grounding techniques (5-4-3-2-1)
+  * Overwhelm: breaking things down, one-step-at-a-time approach
+  * Focus issues: mindfulness moments, attention anchoring
+  * Sadness: validation, gentle self-care suggestions
+  * Stress: progressive muscle relaxation, mindful pauses
+- Keep responses to 2-4 sentences
+- End with a gentle question or offer for further support when appropriate
+- Use inclusive, neurodiversity-affirming language
+
+TONE: Gentle, supportive, knowledgeable, calming, hopeful
 
 Return ONLY a JSON object like this:
-{"response": "Your caring response here"}`;
+{"response": "Your caring, practical response here"}`;
 
     console.log('🤖 Sending to Groq API...');
 
     const chatCompletion = await client.chat.completions.create({
       messages: [{ role: "user", content: prompt }],
       model: "llama-3.1-8b-instant",
-      temperature: 0.9,
-      max_tokens: 200
+      temperature: 0.8,
+      max_tokens: 300
     });
 
     const responseText = chatCompletion.choices[0]?.message?.content;

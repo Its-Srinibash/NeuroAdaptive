@@ -212,13 +212,13 @@ const CalmCompanion = () => {
               </div>
               
               <div className={styles.headerControls}>
-                <button 
+                {/* <button 
                   className={`${styles.voiceToggle} ${isVoiceMode ? styles.active : ''}`}
                   onClick={() => setIsVoiceMode(!isVoiceMode)}
                   title={`Voice ${isVoiceMode ? 'on' : 'off'}`}
                 >
                   {isVoiceMode ? '🔊' : '🔇'}
-                </button>
+                </button> */}
                 <button 
                   className={styles.minimizeBtn} 
                   onClick={() => setIsOpen(false)}
@@ -304,14 +304,14 @@ const CalmCompanion = () => {
                 />
                 
                 <div className={styles.inputActions}>
-                  <button 
+                  {/* <button 
                     className={`${styles.actionBtn} ${styles.voiceBtn} ${isListening ? styles.listening : ''}`}
                     onClick={handleVoiceInput}
                     disabled={isLoading}
                     title="Voice message"
                   >
                     {isListening ? '🔴' : '🎤'}
-                  </button>
+                  </button> */}
                   
                   <button 
                     className={`${styles.actionBtn} ${styles.sendBtn}`}
