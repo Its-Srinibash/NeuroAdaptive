@@ -1,5 +1,6 @@
 import React, { useState, useCallback, useEffect } from "react";
 import './styles/globals.css';
+import logoImage from './styles/Image.jpg';
 
 // Components
 import TaskInput from './components/TaskInput/TaskInput';
@@ -318,10 +319,16 @@ function App() {
         <div className={styles.headerContainer}>
           <div className={styles.brandSection}>
             <div className={styles.logoWrapper}>
-              <div className={styles.logo}>N</div>
+              <div className={styles.logo}>
+                <img 
+                  src={logoImage} 
+                  alt="MindPath AI Logo"
+                  className={styles.logoImage}
+                />
+              </div>
               <div className={styles.brandText}>
-                <h1 className={styles.brandTitle}>NeuroAdaptive</h1>
-                <p className={styles.brandSubtitle}>Mindful Productivity</p>
+                <h1 className={styles.brandTitle}>MindPath AI</h1>
+                {/* <p className={styles.brandSubtitle}>Mindful Productivity</p> */}
               </div>
             </div>
           </div>
@@ -336,9 +343,10 @@ function App() {
             <div className={styles.heroCard}>
               <div className={styles.heroContent}>
                 <div className={styles.heroIcon}>
-                  <div className={styles.iconPulse}>✨</div>
+                  <span className={styles.iconPulse}>✨</span>
+                  <span className={styles.actionPlannerTitle}>PathPlanner</span>
                 </div>
-                <h2 className={styles.heroTitle}>What's on your mind today?</h2>
+                <span className={styles.heroTitle}>What's on your mind today?</span>
                 <p className={styles.heroDescription}>
                   Share any task, project, or challenge. I'll transform it into a calm, 
                   step-by-step journey that feels manageable and achievable.
@@ -371,7 +379,7 @@ function App() {
                         </>
                       ) : (
                         <>
-                          <span className={styles.buttonIcon}>🎯</span>
+                          {/* <span className={styles.buttonIcon}>🎯</span> */}
                           <span>Create My Action Plan</span>
                         </>
                       )}
@@ -398,20 +406,20 @@ function App() {
 
             {/* Modern Feature Cards */}
             <div className={styles.featureShowcase}>
-              <div className={styles.showcaseHeader}>
+              {/* <div className={styles.showcaseHeader}>
                 <h3 className={styles.showcaseTitle}>Or explore these specialized tools</h3>
-                {/* <p className={styles.showcaseSubtitle}>Each designed with neurodiversity in mind</p> */}
-              </div>
+                 <p className={styles.showcaseSubtitle}>Each designed with neurodiversity in mind</p> 
+              </div> */}
               
               <div className={styles.featureGrid}>
                 <div className={styles.featureCard} onClick={handleShowMeetingSummary}>
                   <div className={styles.featureIconWrapper}>
                     <div className={styles.featureIconBg} style={{background: 'linear-gradient(135deg, #3b82f6, #1e40af)'}}>
-                      <span className={styles.featureIcon}>📋</span>
+                      <span className={styles.featureIcon}>✨</span>
                     </div>
                   </div>
                   <div className={styles.featureContent}>
-                    <h4 className={styles.featureTitle}>Meeting Clarity</h4>
+                    <h4 className={styles.featureTitle}>MeetingSense</h4>
                     <p className={styles.featureDescription}>
                       Transform meeting chaos into organized action items, decisions, and deadlines.
                     </p>

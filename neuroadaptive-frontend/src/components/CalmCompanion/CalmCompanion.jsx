@@ -7,7 +7,7 @@ const CalmCompanion = () => {
     { 
       id: 1, 
       type: 'ai', 
-      text: "Hi! 🌸 I'm your Calm Companion. How can I support you today?",
+      text: "Hi! This is your friend, Elio. How can I help you today?",
       timestamp: new Date()
     }
   ]);
@@ -193,8 +193,8 @@ const CalmCompanion = () => {
             className={styles.chatButton}
             onClick={() => setIsOpen(true)}
           >
-            <span className={styles.chatIcon}>🧘‍♀️</span>
-            <span className={styles.chatLabel}>Calm Companion</span>
+            <span className={styles.chatIcon}>☺️</span>
+            <span className={styles.chatLabel}>Elio</span>
           </div>
         )}
 
@@ -204,9 +204,9 @@ const CalmCompanion = () => {
             {/* Header */}
             <div className={styles.chatHeader}>
               <div className={styles.headerInfo}>
-                <span className={styles.aiAvatar}>🧘‍♀️</span>
+                <span className={styles.aiAvatar}>☺️</span>
                 <div>
-                  <h4>Calm Companion</h4>
+                  <h4>Elio</h4>
                   <span className={styles.status}>Here for you</span>
                 </div>
               </div>
@@ -239,7 +239,7 @@ const CalmCompanion = () => {
                   <div key={message.id} className={styles.messageWrapper}>
                     <div className={`${styles.messageBubble} ${styles[message.type]}`}>
                       {message.type === 'ai' && (
-                        <div className={styles.messageAvatar}>🧘‍♀️</div>
+                        <div className={styles.messageAvatar}>☺️</div>
                       )}
                       <div className={styles.messageContent}>
                         <p>{message.text}</p>

@@ -1,11 +1,11 @@
-# NeuroAdaptive
-# HumanEdge - Neuroadaptive Accessibility Platform
+# MindPath AI
+# HumanEdge - MindPath AI Accessibility Platform
 
-A cutting-edge neuroadaptive application designed to enhance cognitive accessibility and productivity for individuals with diverse neurological needs. This platform combines AI-powered assistance with intuitive user interfaces to create personalized experiences that adapt to each user's cognitive patterns and preferences.
+A cutting-edge MindPath AI application designed to enhance cognitive accessibility and productivity for individuals with diverse neurological needs. This platform combines AI-powered assistance with intuitive user interfaces to create personalized experiences that adapt to each user's cognitive patterns and preferences.
 
-## 🧠 What is Neuroadaptive Technology?
+## 🧠 What is MindPath AI Technology?
 
-Neuroadaptive technology dynamically adjusts interface elements, content presentation, and interaction patterns based on real-time assessment of cognitive load, attention patterns, and user preferences. This creates a more accessible and efficient digital experience for users with conditions like ADHD, dyslexia, autism, or cognitive fatigue.
+MindPath AI technology dynamically adjusts interface elements, content presentation, and interaction patterns based on real-time assessment of cognitive load, attention patterns, and user preferences. This creates a more accessible and efficient digital experience for users with conditions like ADHD, dyslexia, autism, or cognitive fatigue.
 
 ## ✨ Key Features
 
@@ -24,7 +24,7 @@ Neuroadaptive technology dynamically adjusts interface elements, content present
 - Action item identification and follow-up reminders
 - Accessible summary formats for different cognitive styles
 
-### 🧘 **Calm Companion**
+### 🧘 **Elio**
 - Personalized stress management tools
 - Breathing exercises and mindfulness prompts
 - Emotional regulation support through adaptive interfaces
@@ -67,5 +67,5 @@ Neuroadaptive technology dynamically adjusts interface elements, content present
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/YOUR_USERNAME/humanedge-neuroadaptive.git
-cd humanedge-neuroadaptive
+git clone https://github.com/YOUR_USERNAME/humanedge-MindPath AI.git
+cd humanedge-MindPath AI

@@ -92,7 +92,7 @@ const MeetingSummary = ({ onBack, preferences }) => {
           </button>
           
           <div className={styles.titleSection}>
-            <div className={styles.meetingIcon}>📋</div>
+            <div className={styles.meetingIcon}>✨</div>
             <div className={styles.titleText}>
               <h1 className={styles.title}>Meeting Action Items</h1>
               <p className={styles.subtitle}>Turn overwhelming meetings into clear, manageable action steps</p>
