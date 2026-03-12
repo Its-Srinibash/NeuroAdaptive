@@ -1,0 +1,71 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  padding: var(--space-6);
+}
+
+.small {
+  gap: var(--space-2);
+  padding: var(--space-3);
+}
+
+.medium {
+  gap: var(--space-4);
+  padding: var(--space-6);
+}
+
+.large {
+  gap: var(--space-6);
+  padding: var(--space-8);
+}
+
+.spinner {
+  position: relative;
+}
+
+.small .spinner {
+  width: 24px;
+  height: 24px;
+}
+
+.medium .spinner {
+  width: 40px;
+  height: 40px;
+}
+
+.large .spinner {
+  width: 56px;
+  height: 56px;
+}
+
+.spinnerCircle {
+  width: 100%;
+  height: 100%;
+  border: 3px solid var(--gray-200);
+  border-top: 3px solid var(--primary-600);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.message {
+  font-size: var(--font-size-sm);
+  color: var(--gray-600);
+  text-align: center;
+  margin: 0;
+}
+
+.small .message {
+  font-size: var(--font-size-xs);
+}
+
+.large .message {
+  font-size: var(--font-size-base);
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

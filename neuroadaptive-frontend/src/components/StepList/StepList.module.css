@@ -1,0 +1,284 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+/* Progress Section */
+.progressSection {
+  padding: var(--space-4);
+  background: var(--white);
+  border-radius: var(--border-radius-xl);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Controls Section */
+.controlsSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.modeToggle {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.toggleLabel {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  cursor: pointer;
+  user-select: none;
+}
+
+.toggleInput {
+  display: none;
+}
+
+.toggleSlider {
+  position: relative;
+  width: 44px;
+  height: 24px;
+  background-color: var(--gray-200);
+  border-radius: var(--border-radius-full);
+  transition: background-color var(--transition-fast);
+}
+
+.toggleSlider::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  background-color: var(--white);
+  border-radius: 50%;
+  transition: transform var(--transition-fast);
+  box-shadow: var(--shadow-sm);
+}
+
+.toggleInput:checked + .toggleSlider {
+  background-color: var(--primary-500);
+}
+
+.toggleInput:checked + .toggleSlider::before {
+  transform: translateX(20px);
+}
+
+.toggleText {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--gray-700);
+}
+
+.actionButtons {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+/* Guided Step View */
+.guidedContainer {
+  background: var(--white);
+  border-radius: var(--border-radius-xl);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.stepHeader {
+  padding: var(--space-4);
+  background: linear-gradient(135deg, var(--primary-50), var(--secondary-50));
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.stepCounter {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--primary-600);
+}
+
+.currentStepCard {
+  padding: var(--space-6);
+  transition: all var(--transition-normal);
+}
+
+.completedCard {
+  background: var(--success-50);
+}
+
+.stepContent {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+  margin-bottom: var(--space-5);
+}
+
+.completedIcon {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  background: var(--success-500);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: var(--space-1);
+}
+
+.stepText {
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-relaxed);
+  color: var(--gray-800);
+  margin: 0;
+}
+
+/* List View */
+.listContainer {
+  background: var(--white);
+  border-radius: var(--border-radius-xl);
+  box-shadow: var(--shadow-sm);
+  padding: var(--space-6);
+}
+
+.stepsList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.stepItem {
+  display: flex;
+  align-items: flex-start;
+  padding: var(--space-4);
+  border-radius: var(--border-radius-lg);
+  transition: all var(--transition-fast);
+  border: 1px solid var(--gray-100);
+}
+
+.stepItem:hover {
+  background: var(--gray-50);
+  border-color: var(--gray-200);
+}
+
+.completedStep {
+  background: var(--success-50);
+  border-color: var(--success-200);
+}
+
+.stepItemContent {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+  width: 100%;
+}
+
+.stepMarker {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  background: var(--gray-100);
+  color: var(--gray-600);
+  border: 2px solid var(--gray-200);
+  transition: all var(--transition-fast);
+}
+
+.completedMarker {
+  background: var(--success-500);
+  color: var(--white);
+  border-color: var(--success-500);
+}
+
+.stepItemText {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+  color: var(--gray-800);
+  padding-top: var(--space-1);
+}
+
+.completedStep .stepItemText {
+  color: var(--success-700);
+  text-decoration: line-through;
+  opacity: 0.8;
+}
+
+/* Focus Time Suggestion */
+.focusTimeSuggestion {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  background: linear-gradient(135deg, var(--warning-50), var(--primary-50));
+  border: 1px solid var(--warning-200);
+  border-radius: var(--border-radius-lg);
+}
+
+.focusTimeIcon {
+  flex-shrink: 0;
+  color: var(--warning-600);
+}
+
+.focusTimeContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.focusTimeLabel {
+  font-size: var(--font-size-sm);
+  color: var(--gray-600);
+}
+
+.focusTimeValue {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--warning-700);
+}
+
+/* Responsive Design */
+@media (min-width: 640px) {
+  .controlsSection {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .actionButtons {
+    flex-wrap: nowrap;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    gap: var(--space-4);
+  }
+
+  .stepText {
+    font-size: var(--font-size-base);
+  }
+
+  .actionButtons {
+    justify-content: stretch;
+  }
+
+  .actionButtons > * {
+    flex: 1;
+  }
+
+  .focusTimeSuggestion {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .focusTimeContent {
+    align-items: center;
+  }
+}
